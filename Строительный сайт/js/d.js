@@ -9,6 +9,18 @@
 
 
     /* МАСКА ДЛЯ ВАЛИДАЦИИ */
+    $('#buttons').validate({
+        rules: {
+            username: {
+                required: true,
+                minlength:3
+            }
+        },
+        messages: {
+            username:""
+        }
+     });
+
     $('#forms-task').validate({
         errorClass:"invalid",
         errorElement:"div",
@@ -29,5 +41,8 @@
         }
 });
 
+
+
 /* МАСКА ДЛЯ ТЕЛЕФОНА */
 $('.input-tell').mask('+7 (999) 999-99-99');
+$('.phone').mask('+7 (999) 999-99-99');
